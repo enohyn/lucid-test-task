@@ -81,7 +81,10 @@ export function FormulaCell({ rowKey }: { rowKey: string }) {
                                     addChip(rowKey, { id: item.id, value: item.value, label: item.label, type: 'chip' });
                                     setInputText('');
                                     setTimeout(() => inputRef.current?.focus(), 0);
-                                }} style={{ cursor: 'pointer' }}>
+                                }} style={{ cursor: 'pointer' }}
+                                key={item.id}
+                                className='hover:bg-gray-300'
+                                >
                                     {item.label}
                                 </List.Item>
                             )}
